@@ -23,8 +23,8 @@ class RequestTests(TestCase):
         with self.assertRaises(InternetAccessBlockedException):
             requests.get('https://www.google.com')
 
-# The @sandbox() decorator can also be applied to the class as a whole. This will be the same as decorating
-# all test_ methods with @sandbox()
+# The @sandbox() decorator can also be applied to the class as a whole. This is the same as decorating
+# all 'test_' methods with @sandbox()
 
 @sandbox()
 class RequestTests(TestCase):
