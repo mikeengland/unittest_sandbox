@@ -25,7 +25,7 @@ setup(
 
     description='unittest_sandbox provides a @sandbox decorator which ensures unit test methods do not '
                 'make any socket/web requests during test execution.',
-    long_description=read('README'),
+    long_description=read('README.md'),
 
     classifiers=[
         'License :: OSI Approved :: Apache Software License',
