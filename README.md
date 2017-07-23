@@ -1,5 +1,6 @@
 # unittest-sandbox
 unittest-sandbox provides a @sandbox decorator which ensures unit test methods do not make any socket/web requests during test execution.
+Note: This currently only works with Python 3.
 
 ## Example usage
 ```python
