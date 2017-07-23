@@ -36,9 +36,5 @@ setup(
         ],
         keywords='unittest unittests testcase sandbox internet block decorator socket requests urllib',
 
-        tests_require=[
-            'mock'
-        ],
-
         test_suite='unittest_sandbox.tests',
 )
