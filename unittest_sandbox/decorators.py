@@ -1,3 +1,5 @@
+import inspect
+
 from unittest_sandbox.socket import SandboxSocket
 
 
@@ -26,7 +28,6 @@ def sandbox(*args, **kwargs):
     """
 
     def decorate(cls):
-        import inspect
         if inspect.isfunction(cls):
             return sandbox_decorator(cls)
 
