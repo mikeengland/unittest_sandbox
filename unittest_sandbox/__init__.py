@@ -1,4 +1,4 @@
 from .decorators import sandbox
 from .socket import InternetAccessBlockedException
 
-__version__ = '{major}.{minor}.{patch}'.format(major=0, minor=1, patch=0)
+__version__ = '{major}.{minor}.{patch}'.format(major=1, minor=0, patch=0)
