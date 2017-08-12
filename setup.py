@@ -5,9 +5,9 @@ import os
 from unittest_sandbox import __version__
 
 
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
-
+def readme():
+    with open('README.rst') as f:
+        return f.read()
 
 setup(
     name='unittest_sandbox',
@@ -25,7 +25,7 @@ setup(
 
     description='unittest_sandbox provides a @sandbox decorator which ensures unit test methods do not '
                 'make any socket/web requests during test execution.',
-    long_description=read('README.md'),
+    long_description=readme(),
 
     classifiers=[
         'License :: OSI Approved :: Apache Software License',
