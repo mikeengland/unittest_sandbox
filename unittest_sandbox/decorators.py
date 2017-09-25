@@ -1,6 +1,6 @@
 import inspect
 
-from unittest_sandbox.socket import SandboxSocket
+from .patcher import block_socket_access
 
 
 def sandbox_decorator(func):
@@ -13,8 +13,7 @@ def sandbox_decorator(func):
     """
 
     def wrapped(self, *args, **kwargs):
-        import socket
-        socket.socket = SandboxSocket
+        block_socket_access()
         return func(self, *args, **kwargs)
 
     return wrapped

@@ -1,23 +1,10 @@
 from unittest import TestCase
 
-import requests
-
 from unittest_sandbox import (
     InternetAccessBlockedException,
     sandbox,
 )
-
-REQUESTS_METHODS = {
-    'get': requests.get,
-    'post': requests.post,
-    'patch': requests.patch,
-    'put': requests.put,
-    'delete': requests.delete,
-}
-
-
-def make_request(method, *args, **kwargs):
-    return REQUESTS_METHODS[method]('https://www.google.com', *args, **kwargs)
+from unittest_sandbox.tests.helpers import make_request
 
 
 class FunctionLevelDecoratorTests(TestCase):

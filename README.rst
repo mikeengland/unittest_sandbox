@@ -50,3 +50,10 @@ Example usage
             with self.assertRaises(InternetAccessBlockedException):
                 requests.get('https://www.google.com')
 
+    # A function can also be imported and called to prevent any web requests from occurring.
+    # For example, this could be called at the start of a Django settings file used by the test runner to
+    # ensure that no web requests are made by the tests.
+
+    from unittest_sandbox import block_socket_access
+
+    block_socket_access()
